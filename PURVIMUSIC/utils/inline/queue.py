@@ -69,15 +69,16 @@ def aq_markup(_, chat_id):
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
-                text="🫶 ❍ᴡηєʀ 𝗔ʙσᴜᴛ 🫶", url=f"https://t.me/AGAIN_COMEBACK"
+                text="❍ᴡηєʀ 𝗔ʙσᴜᴛ 🫶", url=f"https://t.me/AGAIN_COMEBACK"
             ),
             InlineKeyboardButton(
-                text="🌺 𝗖ʜᴧᴛ 𝗚ʀσᴜᴘ 🌺", url=f"https://t.me/+1NPyVr47HYtiYWE9"
+                text="𝗖ʜᴧᴛ 𝗚ʀσᴜᴘ 🌺", url=f"https://t.me/+1NPyVr47HYtiYWE9"
             ),
         ],
       ]

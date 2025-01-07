@@ -2,7 +2,7 @@ import asyncio
 from telegram import CallbackQuery
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram.enums import ParseMode
 from PURVIMUSIC import YouTube, app
 from PURVIMUSIC.core.call import PURVI
 from PURVIMUSIC.misc import SUDOERS, db
@@ -256,6 +256,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     user,
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
+                parse_mode=ParseMode.HTML,
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
@@ -292,6 +293,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     user,
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
+                parse_mode=ParseMode.HTML,
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
@@ -335,6 +337,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         config.SUPPORT_CHAT, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
+                    parse_mode=ParseMode.HTML,
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
@@ -348,6 +351,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         config.SUPPORT_CHAT, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
+                    parse_mode=ParseMode.HTML,
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
@@ -363,6 +367,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         user,
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
+                    parse_mode=ParseMode.HTML,
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"

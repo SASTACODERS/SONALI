@@ -2,7 +2,7 @@ import asyncio
 import os
 from datetime import datetime, timedelta
 from typing import Union
-
+from pyrogram.enums import ParseMode
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, StreamType
@@ -403,6 +403,7 @@ class Call(PyTgCalls):
                         user,
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
+                    parse_mode=ParseMode.HTML,
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "tg"
@@ -450,6 +451,7 @@ class Call(PyTgCalls):
                         user,
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
+                    parse_mode=ParseMode.HTML,
                 )
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"
@@ -509,6 +511,7 @@ class Call(PyTgCalls):
                             config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
+                        parse_mode=ParseMode.HTML,
                     )
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
@@ -521,6 +524,7 @@ class Call(PyTgCalls):
                             config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
+                        parse_mode=ParseMode.HTML,
                     )
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
@@ -537,6 +541,7 @@ class Call(PyTgCalls):
                             user,
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
+                        parse_mode=ParseMode.HTML,
                     )
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "stream"
